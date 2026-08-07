@@ -1,0 +1,152 @@
+.infra-section {
+  position: relative;
+  background: #060b19;
+  padding: 64px 0 72px;
+  border-top: 1px solid rgba(99,102,241,0.12);
+  border-bottom: 1px solid rgba(99,102,241,0.12);
+  overflow: hidden;
+}
+
+.infra-section-glow {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 70% 120% at 50% 50%, rgba(99,102,241,0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.infra-header {
+  text-align: center;
+  margin-bottom: 40px;
+  padding: 0 24px;
+  position: relative;
+  z-index: 1;
+}
+
+.infra-title {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #cbd5e1;
+  margin-bottom: 8px;
+  letter-spacing: 0.01em;
+}
+
+.infra-glow-text {
+  background: linear-gradient(90deg, #818cf8, #c084fc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.infra-subtitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 13.5px;
+  color: #94a3b8;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+}
+
+.infra-ticker-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.infra-ticker-fade {
+  position: absolute;
+  top: 0; bottom: 0;
+  width: 180px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.infra-ticker-fade-left {
+  left: 0;
+  background: linear-gradient(to right, #060b19 20%, transparent);
+}
+
+.infra-ticker-fade-right {
+  right: 0;
+  background: linear-gradient(to left, #060b19 20%, transparent);
+}
+
+.infra-ticker-track {
+  display: flex;
+  gap: 14px;
+  width: max-content;
+  animation: infra-scroll 50s linear infinite;
+  padding: 8px 0;
+}
+
+.infra-ticker-track:hover { animation-play-state: paused; }
+
+@keyframes infra-scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+/* ── Tool chip ── */
+.infra-tool-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 20px 10px 10px;
+  background: rgba(15, 23, 42, 0.65);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 100px;
+  white-space: nowrap;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: default;
+  user-select: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.infra-tool-chip::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--tool-bg, rgba(99,102,241,0.08));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: inherit;
+}
+
+.infra-tool-chip:hover {
+  border-color: var(--tool-border, rgba(99,102,241,0.4));
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(0,0,0,0.4), 0 0 20px var(--tool-bg, rgba(99,102,241,0.15));
+}
+
+.infra-tool-chip:hover::before { opacity: 1; }
+
+/* ── Logo badge ── */
+.infra-tool-logo {
+  width: 28px; height: 28px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.infra-tool-name {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: #cbd5e1;
+  letter-spacing: 0.01em;
+  transition: color 0.25s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.infra-tool-chip:hover .infra-tool-name {
+  color: #f8fafc;
+}

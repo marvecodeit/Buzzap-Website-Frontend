@@ -1,0 +1,76 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "services": "Services",
+    "whyBuzzap": "Pourquoi Buzzap",
+    "insights": "Analyses",
+    "caseStudies": "Études de Cas",
+    "pricing": "Tarifs",
+    "more": "Plus",
+    "demo": "Démo",
+    "faq": "FAQ",
+    "terms": "Conditions Générales",
+    "getAudit": "Audit Gratuit"
+  },
+  "hero": {
+    "badge": "Infrastructure de Croissance IA",
+    "titleLine1": "Des systèmes IA conçus pour",
+    "titleLine2": "développer vos revenus en pilote automatique.",
+    "subtitle": "Cessez de perdre des prospects en raison de relances lentes. Buzzap déploie une capture automatique de prospects, une intégration CRM et des agents IA 24/7.",
+    "ctaPrimary": "Réserver un Audit Stratégique Gratuit",
+    "ctaSecondary": "Explorer les Services"
+  },
+  "infraBar": {
+    "title": "Conçu sur une",
+    "glowText": "infrastructure IA de classe mondiale",
+    "subtitle": "Intégration des meilleurs outils pour que vous n'ayez pas à le faire."
+  },
+  "problem": {
+    "badge": "La Cause Profonde",
+    "headline1": "Vous ne perdez pas parce que votre produit est mauvais.",
+    "headlineAccent": "Vous perdez parce que votre système est défaillant.",
+    "pains": {
+      "followUp": {
+        "title": "Relance de Prospects Lente",
+        "shortDesc": "78% des clients achètent auprès de la première entreprise qui répond.",
+        "fullDesc": "78% des clients achètent auprès du premier répondant. En moyenne, une entreprise met plus de 6 heures à relancer. Pendant ce temps, le prospect s'est déjà adressé à vos concurrents."
+      },
+      "tools": {
+        "title": "Outils Marketing Déconnectés",
+        "shortDesc": "Vos publicités, CRM, WhatsApp et site web ne communiquent pas entre eux.",
+        "fullDesc": "Lorsque vos outils ne communiquent pas entre eux, les prospects passent inaperçus. Nous connectons chaque outil dans un moteur de revenus unifié."
+      },
+      "revenue": {
+        "title": "Revenus Imprévisibles",
+        "shortDesc": "L'abondance un mois, la disette le suivant.",
+        "fullDesc": "Cela se produit lorsque la croissance dépend d'efforts manuels plutôt que d'un système. Nous construisons le système qui génère et qualifie les prospects automatiquement."
+      }
+    }
+  },
+  "solution": {
+    "badge": "Le Système Buzzap",
+    "title1": "Pas une agence.",
+    "titleAccent": "Un moteur de croissance IA.",
+    "desc": "La plupart des agences fournissent des rapports. Buzzap déploie des systèmes opérationnels — une infrastructure IA qui génère des prospects et conclut des ventes.",
+    "ctaPrimary": "Réserver un appel stratégique",
+    "ctaSecondary": "Voir tous les services"
+  },
+  "pricing": {
+    "title": "Tarification Transparente pour une Échelle Infinie",
+    "subtitle": "Pas de frais cachés. Choisissez un forfait ou demandez un moteur de croissance sur mesure.",
+    "monthly": "Facturation Mensuelle",
+    "annual": "Facturation Annuelle (-20%)"
+  },
+  "booking": {
+    "badge": "Audit Stratégique Gratuit",
+    "duration": "30 Minutes",
+    "title": "Réservez votre appel avec",
+    "subtitle": "Sélectionnez un créneau ci-dessous. Nous analyserons vos systèmes actuels et vous fournirons une feuille de route IA sur mesure."
+  },
+  "buttons": {
+    "submit": "Soumettre",
+    "submitting": "Envoi en cours...",
+    "cancel": "Annuler",
+    "getStarted": "Commencer"
+  }
+}

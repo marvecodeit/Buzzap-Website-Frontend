@@ -1,0 +1,300 @@
+/* Fonts loaded optimized via next/font/google in layout.js */
+
+.expMain {
+  background: #080d1e;
+  position: relative;
+  overflow: hidden;
+  color: #fff;
+  border-top: 1px solid rgba(99,102,241,0.08);
+  border-bottom: 1px solid rgba(99,102,241,0.08);
+  padding-bottom: 120px;
+}
+
+.expGridOverlay {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(99,102,241,0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(99,102,241,0.025) 1px, transparent 1px);
+  background-size: 48px 48px;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.expSpotlight {
+  position: absolute;
+  width: 800px;
+  height: 800px;
+  background: radial-gradient(circle, rgba(99,102,241,0.1) 0%, rgba(139,92,246,0.04) 40%, transparent 65%);
+  z-index: 1;
+  pointer-events: none;
+  filter: blur(60px);
+  will-change: transform;
+}
+
+.expContainer {
+  position: relative;
+  z-index: 3;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ── Marquee ── */
+.expMarqueeWrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-top: 1px solid rgba(99,102,241,0.1);
+  border-bottom: 1px solid rgba(99,102,241,0.1);
+  z-index: 2;
+  padding: 22px 0;
+  margin-bottom: 80px;
+  background: linear-gradient(90deg, rgba(99,102,241,0.03) 0%, transparent 50%, rgba(139,92,246,0.03) 100%);
+}
+
+.expMarqueeFadeLeft,
+.expMarqueeFadeRight {
+  position: absolute;
+  top: 0; bottom: 0;
+  width: 120px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.expMarqueeFadeLeft { left: 0; background: linear-gradient(to right, #020617 20%, transparent); }
+.expMarqueeFadeRight { right: 0; background: linear-gradient(to left, #020617 20%, transparent); }
+
+.expMarquee {
+  display: flex;
+  white-space: nowrap;
+  width: 100%;
+}
+
+.expMarqueeGroup {
+  display: flex;
+  flex-shrink: 0;
+  min-width: 100%;
+}
+
+.expMarqueeTag {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  color: rgba(255,255,255,0.1);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  transition: color 0.3s ease;
+}
+
+.expMarqueeTag:hover { color: #818cf8; }
+
+.expMarqueeDot {
+  font-size: 8px;
+  color: rgba(99,102,241,0.3);
+  margin: 0 28px;
+}
+
+/* ── Header ── */
+.expHeader {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 80px;
+}
+
+.expBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #818cf8;
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  background: rgba(99,102,241,0.08);
+  padding: 7px 20px;
+  border-radius: 100px;
+  border: 1px solid rgba(99,102,241,0.22);
+  margin-bottom: 28px;
+}
+
+.expTitle {
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(36px, 5.5vw, 70px);
+  font-weight: 900;
+  line-height: 1.06;
+  margin-bottom: 20px;
+  letter-spacing: -0.04em;
+  color: #f1f5f9;
+}
+
+.expGradientText {
+  background: linear-gradient(135deg, #818cf8 0%, #c084fc 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.expSubtitle {
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(15px, 1.8vw, 17px);
+  color: #94a3b8;
+  line-height: 1.75;
+}
+
+/* ── Cards ── */
+.expGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+}
+
+.expCard {
+  position: relative;
+  background: rgba(8, 12, 32, 0.7);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 24px;
+  padding: 40px 34px;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+  overflow: hidden;
+}
+
+/* Top gradient line */
+.expCardTopLine {
+  position: absolute;
+  top: 0;
+  left: 10%;
+  width: 80%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--stat-color, #818cf8), transparent);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.expCard:hover .expCardTopLine { opacity: 0.8; }
+
+.expCard:hover {
+  border-color: var(--stat-border, rgba(99,102,241,0.25));
+  box-shadow: 0 30px 60px rgba(0,0,0,0.5), 0 0 0 1px rgba(255,255,255,0.04);
+}
+
+.expCardHighlight {
+  background: rgba(10, 20, 50, 0.75);
+  border-color: var(--stat-border, rgba(16,185,129,0.2));
+  box-shadow: 0 0 40px rgba(16,185,129,0.06);
+}
+
+.expCardHighlight .expCardTopLine { opacity: 0.6; }
+
+.expCardBorderGlow {
+  position: absolute;
+  top: 0; left: 8%; width: 84%; height: 1px;
+  background: linear-gradient(90deg, transparent, var(--stat-color, #818cf8), transparent);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.expCard:hover .expCardBorderGlow { opacity: 1; }
+
+/* Inner glow */
+.expCardInnerGlow {
+  position: absolute;
+  top: -60px; right: -60px;
+  width: 200px; height: 200px;
+  background: radial-gradient(circle, var(--stat-color, #818cf8) 0%, transparent 70%);
+  opacity: 0.04;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+  border-radius: 50%;
+}
+
+.expCard:hover .expCardInnerGlow { opacity: 0.1; }
+
+/* Icon */
+.expIconWrapper {
+  width: 56px; height: 56px;
+  background: var(--stat-bg, rgba(99,102,241,0.08));
+  border: 1px solid var(--stat-border, rgba(99,102,241,0.2));
+  border-radius: 16px;
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: 32px;
+  color: var(--stat-color, #818cf8);
+  transition: all 0.35s ease;
+}
+
+.expCard:hover .expIconWrapper {
+  transform: scale(1.08);
+  box-shadow: 0 0 20px var(--stat-color, rgba(99,102,241,0.3));
+}
+
+.expCardTitle {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(32px, 4vw, 46px);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  margin-bottom: 6px;
+  color: var(--stat-color, #f1f5f9);
+  line-height: 1;
+}
+
+.expCardHighlight .expCardTitle {
+  background: linear-gradient(135deg, #10b981, #34d399);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.expCardLabel {
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: #e2e8f0;
+  margin-bottom: 8px;
+  letter-spacing: -0.01em;
+}
+
+.expCardDesc {
+  font-family: 'Inter', sans-serif;
+  font-size: 13.5px;
+  color: #94a3b8;
+  line-height: 1.6;
+  margin-bottom: 32px;
+  flex-grow: 1;
+}
+
+.expCardLink {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding-top: 18px;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: #cbd5e1;
+  transition: color 0.25s ease;
+}
+
+.expCard:hover .expCardLink { color: var(--stat-color, #818cf8); }
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .expMarqueeWrapper { margin-bottom: 56px; }
+  .expHeader { margin: 0 auto 64px; }
+}
+
+@media (max-width: 680px) {
+  .expMain { padding-bottom: 60px; }
+  .expMarqueeWrapper { margin-bottom: 40px; padding: 16px 0; }
+  .expHeader { margin: 0 auto 48px; }
+  .expContainer { padding: 0 16px; }
+  .expGrid { gap: 12px; }
+  .expCard { padding: 28px 24px; border-radius: 18px; }
+}

@@ -1,0 +1,313 @@
+/* Fonts loaded optimized via next/font/google in layout.js */
+
+/* --- LAYOUT SECTION CONTEXT --- */
+.automation-section {
+  position: relative;
+  background-color: #020617; /* FIXED: Altered from #0b0f19 to match exact background flow continuity with Experience */
+  padding: 80px 24px 40px 24px; /* FIXED: Compressed bottom padding block to stitch layouts tightly together */
+  width: 100%;
+  overflow: hidden;
+  font-family: 'Inter', sans-serif;
+  box-sizing: border-box;
+}
+
+/* Ensure all elements calculate sizing securely */
+.automation-section *,
+.automation-section *::before,
+.automation-section *::after {
+  box-sizing: border-box;
+}
+
+/* Subtle glowing dark matrix atmosphere spot background */
+.automation-glow-core {
+  position: absolute;
+  bottom: -10%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 800px;
+  height: 400px;
+  background: radial-gradient(50% 50% at 50% 50%, rgba(168, 85, 247, 0.06) 0%, rgba(59, 130, 246, 0.02) 70%, transparent 100%);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 1;
+  filter: blur(40px);
+}
+
+.automation-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 10;
+  width: 100%;
+}
+
+/* --- ROW SPLIT HEADER LAYOUT --- */
+.automation-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px; 
+  margin-bottom: 48px; /* FIXED: Compacted from 64px to clear excessive spacing heights */
+  width: 100%;
+  flex-wrap: wrap; 
+}
+
+.automation-title {
+  font-size: 52px;
+  font-weight: 700;
+  line-height: 1.15;
+  color: #ffffff;
+  letter-spacing: -0.03em;
+  flex: 1 1 500px; 
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Elegant neon gradient color text handling */
+.gradient-text {
+  background: linear-gradient(90deg, #06b6d4 0%, #3b82f6 50%, #a855f7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: inline-block;
+}
+
+.automation-description {
+  font-size: 16px;
+  line-height: 1.65;
+  color: #64748b; 
+  flex: 1 1 400px; 
+  margin: 0;
+  padding-top: 8px; 
+}
+
+/* --- THE FEATURE GRID SYSTEM --- */
+.automation-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 24px;
+  width: 100%;
+}
+
+/* Custom dashboard card layout architecture */
+.automation-card {
+  background: rgba(15, 22, 42, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  border-radius: 20px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; 
+  min-height: 380px; 
+  width: 100%;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease;
+}
+
+.automation-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(59, 130, 246, 0.15);
+}
+
+/* --- DATA/PREVIEW BOX WRAPPERS --- */
+.card-visual-box {
+  background: #070a13;
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  border-radius: 14px;
+  height: 200px;
+  width: 100%;
+  margin-bottom: 24px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  flex-shrink: 0; 
+}
+
+/* System Color Codes */
+.text-cyan { color: #06b6d4; }
+.text-blue { color: #3b82f6; }
+.text-purple { color: #a855f7; }
+
+/* Visual Block 1: Pipeline Pipeline Builders */
+.mini-node-pipeline {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #334155;
+  font-weight: 600;
+}
+
+.node-item {
+  width: 38px;
+  height: 38px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.node-item.active-node {
+  background: rgba(59, 130, 246, 0.08);
+  border-color: rgba(59, 130, 246, 0.3);
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.15);
+}
+
+.node-connector {
+  font-size: 14px;
+  user-select: none;
+}
+
+/* Visual Block 2: CRM Metrics Graphics */
+.crm-box {
+  padding: 16px;
+  justify-content: space-between;
+}
+
+.crm-mock-header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.crm-label { color: #475569; text-transform: uppercase; letter-spacing: 0.03em;}
+.crm-metric { font-size: 12px; }
+
+.crm-bar-chart {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  width: 100%;
+  height: 64px;
+  padding: 0 4px;
+  gap: 6px;
+}
+
+.chart-bar {
+  flex: 1;
+  background: rgba(6, 182, 212, 0.15);
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  min-height: 4px;
+  transition: background 0.3s ease;
+}
+
+.chart-bar:nth-child(5) {
+  background: #06b6d4; 
+  box-shadow: 0 0 14px rgba(6, 182, 212, 0.4);
+}
+
+.crm-mini-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  width: 100%;
+}
+
+.stat-sub-card {
+  background: rgba(255, 255, 255, 0.01);
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  border-radius: 8px;
+  padding: 6px;
+  text-align: center;
+}
+
+.stat-sub-card span {
+  display: block;
+  font-size: 13px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.stat-sub-card label {
+  font-size: 9px;
+  color: #475569;
+  display: block;
+  margin-top: 1px;
+}
+
+/* Visual Block 3: Live Growth Pulse */
+.live-status-tag {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 4px 10px;
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  font-weight: 600;
+  color: #94a3b8;
+}
+
+.live-dot {
+  width: 6px;
+  height: 6px;
+  background-color: #06b6d4;
+  border-radius: 50%;
+  box-shadow: 0 0 8px #06b6d4;
+}
+
+.analytics-graphic-wrap {
+  opacity: 0.25;
+  color: #ffffff;
+}
+
+/* --- TEXT DETAILS CONTENT BASE --- */
+.card-info {
+  width: 100%;
+}
+
+.card-info h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0 0 10px 0;
+  letter-spacing: -0.01em;
+}
+
+.card-info p {
+  font-size: 14px;
+  line-height: 1.55;
+  color: #64748b;
+  margin: 0;
+}
+
+/* --- RESPONSIVE MEDIA QUERIES --- */
+@media (max-width: 1024px) {
+  .automation-header {
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 36px;
+  }
+  .automation-title {
+    font-size: 40px;
+    max-width: 100%;
+    flex: none;
+  }
+  .automation-description {
+    max-width: 100%;
+    margin-top: 0;
+    flex: none;
+  }
+}
+
+@media (max-width: 680px) {
+  .automation-section {
+    padding: 60px 16px 24px 16px; /* FIXED: Keeps tight layout execution fluid on mobile */
+  }
+  .automation-title {
+    font-size: 32px;
+  }
+  .automation-grid {
+    grid-template-columns: 1fr; 
+  }
+}

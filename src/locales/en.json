@@ -1,0 +1,76 @@
+{
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "whyBuzzap": "Why Buzzap",
+    "insights": "Insights",
+    "caseStudies": "Case Studies",
+    "pricing": "Pricing",
+    "more": "More",
+    "demo": "Demo",
+    "faq": "FAQ",
+    "terms": "Terms & Conditions",
+    "getAudit": "Get Free Audit"
+  },
+  "hero": {
+    "badge": "AI Growth Infrastructure",
+    "titleLine1": "Engineered AI systems that",
+    "titleLine2": "scale revenue on autopilot.",
+    "subtitle": "Stop losing leads to slow follow-up. Buzzap deploys automated lead capture, CRM integration, and 24/7 AI agents built specifically for your business.",
+    "ctaPrimary": "Book a Free Strategy Audit",
+    "ctaSecondary": "Explore Services"
+  },
+  "infraBar": {
+    "title": "Built on world-class",
+    "glowText": "AI infrastructure",
+    "subtitle": "Integrating the best tools so you don't have to."
+  },
+  "problem": {
+    "badge": "The Root Cause",
+    "headline1": "You're not losing because your product is bad.",
+    "headlineAccent": "You're losing because your system is broken.",
+    "pains": {
+      "followUp": {
+        "title": "Slow Lead Follow-up",
+        "shortDesc": "78% of customers buy from the first business to respond.",
+        "fullDesc": "78% of customers buy from the first business to respond. The average business takes 6+ hours to follow up on a new lead. By then — the lead has already spoken to three competitors."
+      },
+      "tools": {
+        "title": "Disconnected Marketing Tools",
+        "shortDesc": "Your ads, CRM, WhatsApp, and website don't talk to each other.",
+        "fullDesc": "When your ads, CRM, WhatsApp, and website don't talk to each other — leads fall through the gaps silently. We connect every tool into one unified revenue engine."
+      },
+      "revenue": {
+        "title": "Unpredictable Revenue",
+        "shortDesc": "Feast one month. Famine the next.",
+        "fullDesc": "Feast one month. Famine the next. It happens when growth depends on manual effort instead of a system. We build the system that generates and nurtures leads automatically."
+      }
+    }
+  },
+  "solution": {
+    "badge": "The Buzzap System",
+    "title1": "Not an agency.",
+    "titleAccent": "An AI growth engine.",
+    "desc": "Most agencies deliver reports. Buzzap deploys working systems — AI infrastructure that generates leads, closes deals, and scales revenue while you focus on what matters.",
+    "ctaPrimary": "Book a strategy call",
+    "ctaSecondary": "See all services"
+  },
+  "pricing": {
+    "title": "Transparent Pricing for Infinite Scale",
+    "subtitle": "No hidden fees. Choose a plan or request a custom growth engine deployment.",
+    "monthly": "Monthly Billing",
+    "annual": "Annual Billing (Save 20%)"
+  },
+  "booking": {
+    "badge": "Free Strategy Audit",
+    "duration": "30 Minutes",
+    "title": "Book your strategy call with",
+    "subtitle": "Select a convenient time below. We'll audit your current growth stack and deliver a custom AI roadmap."
+  },
+  "buttons": {
+    "submit": "Submit",
+    "submitting": "Submitting...",
+    "cancel": "Cancel",
+    "getStarted": "Get Started"
+  }
+}

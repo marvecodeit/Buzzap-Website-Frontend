@@ -1,0 +1,173 @@
+/* Fonts loaded optimized via next/font/google in layout.js */
+
+.aiMain {
+    background: #020617; /* Keeps your exact background */
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 120px 24px;
+}
+
+/* Particle Canvas Overlay */
+.aiCanvas {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 1;
+    mix-blend-mode: screen;
+}
+
+/* Beautiful Interactive Mouse Glowing Radial Ring */
+.aiGlow {
+    position: absolute;
+    width: 800px;
+    height: 800px;
+    background: radial-gradient(circle, rgba(59, 130, 246, 0.12) 0%, rgba(147, 51, 234, 0.03) 35%, transparent 70%);
+    top: 0;
+    left: 0;
+    z-index: 1;
+    pointer-events: none;
+    filter: blur(20px);
+    will-change: transform;
+}
+
+/* Agency subtle water-marked backdrop text */
+.bgWatermark {
+    position: absolute;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 25vw;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.01);
+    bottom: -5%;
+    left: 50%;
+    transform: translateX(-50%);
+    user-select: none;
+    pointer-events: none;
+    z-index: 0;
+    letter-spacing: -0.05em;
+}
+
+.aiContainer {
+    position: relative;
+    z-index: 2;
+    max-width: 1200px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Interactive Badge Styling */
+.aiBadge {
+    display: inline-block;
+    color: #93c5fd;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(147, 51, 234, 0.1));
+    padding: 8px 24px;
+    border-radius: 100px;
+    border: 1px solid rgba(59, 130, 246, 0.25);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Enhanced Typography with Color Gradient Split */
+.aiTitle {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: clamp(44px, 7vw, 84px);
+    color: #fff;
+    margin: 24px 0 64px;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    line-height: 1.1;
+}
+
+.textGradient {
+    background: linear-gradient(135deg, #60a5fa 0%, #a78bfa 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Grid layout with cleaner responsiveness */
+.aiGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 32px;
+    padding: 0 10px;
+}
+
+/* Cyberpunk Glassmorphism Premium Cards */
+.aiCard {
+    position: relative;
+    background: rgba(255, 255, 255, 0.015);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    padding: 48px 40px;
+    border-radius: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    text-align: left;
+    cursor: pointer;
+    overflow: hidden;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Card index number details */
+.cardIcon {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: #60a5fa;
+    opacity: 0.6;
+    margin-bottom: 28px;
+    letter-spacing: 1px;
+}
+
+.aiCard h3 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 26px;
+    color: #fff;
+    margin-bottom: 16px;
+    font-weight: 500;
+}
+
+.aiCard p {
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    color: #94a3b8;
+    line-height: 1.6;
+    margin-bottom: 32px;
+}
+
+/* Dynamic subtle hover arrow inside cards */
+.cardArrow {
+    font-size: 20px;
+    color: #60a5fa;
+    opacity: 0;
+    transform: translateX(-10px);
+    transition: all 0.3s ease;
+}
+
+.aiCard:hover .cardArrow {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Decorative top micro gradient border line inside cards */
+.cardBorderGlow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #60a5fa, #a78bfa, transparent);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.aiCard:hover .cardBorderGlow {
+    opacity: 1;
+}

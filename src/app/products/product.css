@@ -1,0 +1,296 @@
+.products {
+    padding: 10px 28px 34px 28px;
+    background:
+        radial-gradient(circle at top left, #1e3a8a55, transparent 40%),
+        radial-gradient(circle at bottom right, #7c3aed44, transparent 40%),
+        #020617;
+    min-height: 100vh;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    position: relative;
+    box-sizing: border-box;
+}
+
+/* Force border-box calculation to guarantee padding doesn't cause page blow-out */
+.products *, 
+.products *::before, 
+.products *::after {
+    box-sizing: border-box;
+}
+
+.productsInner {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.productsHeading {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    font-size: 34px;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* --- THE MAIN FLEX CONTAINMENT FRAME --- */
+.productsGrid {
+    display: flex;
+    flex-wrap: wrap; /* FIXED: Instructs elements to wrap onto separate lines on mobile viewports */
+    gap: 40px;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.smallProductsColumn {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex: 1;
+    min-width: 300px; /* FIXED: Establishes a minimum boundary width */
+}
+
+.bigProduct {
+    flex: 1.4;
+    position: sticky;
+    top: 40px; 
+    min-width: 300px; /* FIXED: Keeps it well proportioned even when stacked */
+}
+
+.productCard {
+    background: rgba(255, 255, 255, 0.04);
+    border-radius: 20px;
+    padding: 24px;
+    transition: all 0.3s ease;
+    text-align: left;
+    position: relative;
+    width: 100%;
+    
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start; 
+    justify-content: flex-start; 
+}
+
+.productCard:hover {
+    transform: translateY(-8px);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.productCard::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 20px;
+    padding: 1.5px;
+    background: linear-gradient(135deg, #3b82f6, #a855f7);
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.productCard:hover::before {
+    opacity: 1;
+}
+
+.productCard h4 {
+    color: #fff;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    margin: 16px 0 12px 0;
+}
+
+.productCard p {
+    color: #94a3b8;
+    line-height: 1.7;
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+.productImage {
+    width: 100%;
+    height: 180px;
+    border-radius: 16px;
+    overflow: hidden;
+    margin-bottom: 16px;
+}
+
+.productImage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.productPrice {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: #60a5fa;
+    margin-bottom: 16px;
+}
+
+.featuredCard {
+    padding: 0 !important;
+    overflow: hidden;
+}
+
+.featuredImage {
+    width: 100%;
+    height: clamp(260px, 40vh, 450px); /* FIXED: Fluidly scales from 260px up to 450px instead of staying rigid */
+    object-fit: cover;
+    object-position: top; 
+}
+
+.featuredContent {
+    padding: 32px;
+}
+
+@media (max-width: 480px) {
+    .featuredContent {
+        padding: 24px; /* Slightly tighter internal padding for small screens */
+    }
+}
+
+.featuredBadge {
+    display: inline-block;
+    padding: 6px 14px;
+    background: rgba(96, 165, 250, 0.15);
+    color: #60a5fa;
+    border-radius: 50px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 16px;
+    border: 1px solid rgba(96, 165, 250, 0.3);
+}
+
+.productButton {
+    width: 100%;
+    padding: 12px;
+    margin-top: auto; 
+    background: linear-gradient(135deg, #3b82f6, #a855f7);
+    border: none;
+    border-radius: 12px;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+    position: relative;
+    z-index: 1;
+}
+
+.productButton:hover {
+    opacity: 0.9;
+}
+
+/* --- SYSTEM OVERLAY MODALS --- */
+.modalOverlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(2, 6, 23, 0.85);
+    backdrop-filter: blur(8px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 3000; /* Elevated above navbars and layouts */
+    padding: 16px;
+}
+
+.modalContent {
+    background: #0f172a;
+    width: 100%;
+    max-width: 600px;
+    border-radius: 24px;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    max-height: 90vh; /* Prevents overflow clipping on small viewports */
+    overflow-y: auto;
+}
+
+.closeButton {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    color: white;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modalImage {
+    width: 100%;
+    height: clamp(200px, 30vh, 350px); /* Better dynamic sizing inside modal */
+    background: #020617;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modalImage img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.modalBody {
+    padding: 24px;
+}
+
+.modalBody h2 {
+    color: white;
+    margin-bottom: 16px;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: clamp(24px, 4vw, 32px);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+}
+
+.modalBody p {
+    color: #cbd5e1;
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    line-height: 1.7;
+    margin-bottom: 24px;
+}
+
+/* --- RESPONSIVE MEDIA HOOK BREAKPOINTS --- */
+@media (max-width: 968px) {
+    .productsGrid {
+        gap: 24px;
+    }
+    
+    .bigProduct {
+        position: relative; /* Disables sticky attachment once everything is neatly stacked vertically */
+        top: 0;
+        order: -1; /* FIXED: Pushes the Featured Big Product to the top of the line on mobile layouts */
+    }
+}
+
+@media (max-width: 580px) {
+    .products {
+        padding: 60px 16px;
+        border-top-left-radius: 32px;
+        border-top-right-radius: 32px;
+    }
+    .productsHeading {
+        font-size: 28px;
+        margin-bottom: 28px;
+    }
+}

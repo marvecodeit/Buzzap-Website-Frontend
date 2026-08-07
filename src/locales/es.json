@@ -1,0 +1,76 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "services": "Servicios",
+    "whyBuzzap": "Por qué Buzzap",
+    "insights": "Artículos",
+    "caseStudies": "Casos de Éxito",
+    "pricing": "Precios",
+    "more": "Más",
+    "demo": "Demo",
+    "faq": "Preguntas Frecuentes",
+    "terms": "Términos y Condiciones",
+    "getAudit": "Auditoría Gratis"
+  },
+  "hero": {
+    "badge": "Infraestructura de Crecimiento IA",
+    "titleLine1": "Sistemas de IA diseñados para",
+    "titleLine2": "escalar ingresos en piloto automático.",
+    "subtitle": "No pierda más clientes por seguimientos lentos. Buzzap despliega captura automatizada de leads, integración con CRM y agentes de IA 24/7.",
+    "ctaPrimary": "Reservar Auditoría Estratégica Gratis",
+    "ctaSecondary": "Explorar Servicios"
+  },
+  "infraBar": {
+    "title": "Construido sobre una",
+    "glowText": "infraestructura de IA de clase mundial",
+    "subtitle": "Integrando las mejores herramientas para que usted no tenga que hacerlo."
+  },
+  "problem": {
+    "badge": "La Causa Raíz",
+    "headline1": "No estás perdiendo porque tu producto sea malo.",
+    "headlineAccent": "Estás perdiendo porque tu sistema está roto.",
+    "pains": {
+      "followUp": {
+        "title": "Seguimiento Lento de Leads",
+        "shortDesc": "El 78% de los clientes compra a la primera empresa que responde.",
+        "fullDesc": "El 78% de los clientes compra al primer respondedor. Una empresa promedio tarda más de 6 horas en responder. Para entonces, el prospecto ya habló con tres competidores."
+      },
+      "tools": {
+        "title": "Herramientas Desconectadas",
+        "shortDesc": "Tus anuncios, CRM, WhatsApp y sitio web no se comunican entre sí.",
+        "fullDesc": "Cuando tus herramientas no están integradas, los prospectos se pierden en el camino. Conectamos cada herramienta en un motor de ingresos unificado."
+      },
+      "revenue": {
+        "title": "Ingresos Impredecibles",
+        "shortDesc": "Abundancia un mes. Escasez al siguiente.",
+        "fullDesc": "Sucede cuando el crecimiento depende de esfuerzos manuales en lugar de un sistema. Creamos el sistema que genera y nutre clientes automáticamente."
+      }
+    }
+  },
+  "solution": {
+    "badge": "El Sistema Buzzap",
+    "title1": "No somos una agencia.",
+    "titleAccent": "Un motor de crecimiento con IA.",
+    "desc": "La mayoría de las agencias entregan informes. Buzzap despliega sistemas funcionales: infraestructura de IA que genera prospectos y cierra ventas.",
+    "ctaPrimary": "Reservar llamada estratégica",
+    "ctaSecondary": "Ver todos los servicios"
+  },
+  "pricing": {
+    "title": "Precios Transparentes para Escala Infinita",
+    "subtitle": "Sin cargos ocultos. Elige un plan o solicita un motor de crecimiento personalizado.",
+    "monthly": "Facturación Mensual",
+    "annual": "Facturación Anual (Ahorra 20%)"
+  },
+  "booking": {
+    "badge": "Auditoría Estratégica Gratis",
+    "duration": "30 Minutos",
+    "title": "Reserva tu llamada con",
+    "subtitle": "Selecciona un horario conveniente. Auditaremos tu sistema actual y te entregaremos una hoja de ruta de IA."
+  },
+  "buttons": {
+    "submit": "Enviar",
+    "submitting": "Enviando...",
+    "cancel": "Cancelar",
+    "getStarted": "Comenzar"
+  }
+}

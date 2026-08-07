@@ -1,0 +1,216 @@
+/* Fonts loaded optimized via next/font/google in layout.js */
+
+.sysMain {
+    background: #020617; /* Exact dark blue/black background base matches menu.png */
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 120px 24px;
+    color: #fff;
+}
+
+/* Subtle tech blueprint grid mesh pattern overlay */
+.sysGridOverlay {
+    position: absolute;
+    inset: 0;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.01) 1px, transparent 1px),
+                      linear-gradient(90deg, rgba(255, 255, 255, 0.01) 1px, transparent 1px);
+    background-size: 60px 60px;
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* GSAP Fluid Aura spotlight follow tracking system */
+.sysInteractiveGlow {
+    position: absolute;
+    width: 700px;
+    height: 700px;
+    background: radial-gradient(circle, rgba(6, 182, 212, 0.08) 0%, rgba(168, 85, 247, 0.02) 45%, transparent 70%);
+    top: 0;
+    left: 0;
+    z-index: 1;
+    pointer-events: none;
+    filter: blur(40px);
+    will-change: transform;
+}
+
+.sysContainer {
+    position: relative;
+    z-index: 2;
+    max-width: 1400px;
+    width: 100%;
+}
+
+/* Header section aligned via flexbox to recreate top asymmetric view structure */
+.sysHeader {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 48px;
+    margin-bottom: 64px;
+}
+
+.sysTitleSide {
+    flex: 1.2;
+}
+
+.sysTitle {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: clamp(36px, 5vw, 62px);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.15;
+}
+
+/* Sleek cyber gradient for emphasis word tracks */
+.sysGradientText {
+    background: linear-gradient(90deg, #06b6d4 0%, #3b82f6 50%, #d946ef 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.sysDescSide {
+    flex: 0.9;
+    padding-bottom: 8px;
+}
+
+.sysDescSide p {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    color: #64748b;
+    line-height: 1.65;
+}
+
+/* Inner Large Pipeline Module housing row structure */
+.sysPipelineWrapper {
+    background: rgba(3, 7, 18, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    border-radius: 24px;
+    padding: 50px 40px;
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.05);
+}
+
+.sysFlexContainer {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    overflow-x: auto; /* Gracefully transforms to scrolling row on tablet/mobile views */
+    padding-bottom: 10px;
+}
+
+.sysStepItem {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    min-width: 210px;
+}
+
+/* Premium High-Tech Card components */
+.sysCard {
+    position: relative;
+    background: rgba(255, 255, 255, 0.01);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    padding: 24px;
+    width: 100%;
+    overflow: hidden;
+    transition: border-color 0.4s ease, background-color 0.4s ease;
+    cursor: pointer;
+}
+
+.sysCardInner {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+/* Dedicated micro housing for the Lucide Vector graphics tokens */
+.sysIconBox {
+    width: 36px;
+    height: 36px;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #06b6d4;
+}
+
+.sysTextContent {
+    display: flex;
+    flex-direction: column;
+}
+
+.sysStepLabel {
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #475569;
+    margin-bottom: 4px;
+    text-transform: uppercase;
+}
+
+.sysCardTitle {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 6px;
+    letter-spacing: 0.01em;
+}
+
+.sysCardDesc {
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    color: #475569;
+    line-height: 1.4;
+}
+
+/* Connecting Arrow Layout Element blocks */
+.sysStepArrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #1e293b;
+    opacity: 0.5;
+    padding: 0 10px;
+    flex-shrink: 0;
+    will-change: transform, color;
+}
+
+/* Decorative automated neon status bar at bottom of active steps */
+.sysCardNode {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: #06b6d4;
+    box-shadow: 0 -2px 10px #06b6d4;
+    opacity: 0;
+    transform: scaleX(0.3);
+    transform-origin: center;
+    will-change: transform, opacity;
+}
+
+/* Desktop to Mobile Repositioning Rules adjustments */
+@media (max-width: 968px) {
+    .sysHeader {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+    .sysFlexContainer {
+        overflow-x: scroll;
+    }
+}

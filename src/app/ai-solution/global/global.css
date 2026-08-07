@@ -1,0 +1,197 @@
+/* Fonts loaded optimized via next/font/google in layout.js */
+
+/* Main Page Container styling with original dark blue tone */
+.srvMain {
+    background: #020617;
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+    padding: 140px 24px;
+    color: #fff;
+}
+
+/* Subtle tech grid mesh background pattern */
+.srvGridOverlay {
+    position: absolute;
+    inset: 0;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.015) 1px, transparent 1px),
+                      linear-gradient(90deg, rgba(255, 255, 255, 0.015) 1px, transparent 1px);
+    background-size: 50px 50px;
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* GSAP interactive spotlight */
+.srvInteractiveGlow {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(59, 130, 246, 0.1) 0%, rgba(147, 51, 234, 0.02) 50%, transparent 70%);
+    top: 0;
+    left: 0;
+    z-index: 1;
+    pointer-events: none;
+    filter: blur(40px);
+    will-change: transform;
+}
+
+.srvContainer {
+    position: relative;
+    z-index: 2;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+/* Header UI Elements */
+.srvHeader {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 90px;
+}
+
+.srvBadge {
+    display: inline-block;
+    color: #60a5fa;
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    background: rgba(59, 130, 246, 0.08);
+    padding: 6px 20px;
+    border-radius: 100px;
+    border: 1px solid rgba(59, 130, 246, 0.2);
+    margin-bottom: 24px;
+}
+
+.srvTitle {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: clamp(38px, 6vw, 68px);
+    font-weight: 700;
+    line-height: 1.15;
+    margin-bottom: 24px;
+    letter-spacing: -0.02em;
+}
+
+.srvGradientText {
+    background: linear-gradient(135deg, #3b82f6 0%, #a855f7 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.srvSubtitle {
+    font-family: 'Inter', sans-serif;
+    font-size: clamp(15px, 2vw, 18px);
+    color: #94a3b8;
+    line-height: 1.7;
+    font-weight: 400;
+}
+
+/* Cards Matrix Grid Layout */
+.srvGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+    gap: 24px;
+}
+
+/* Premium Tech Glassmorphic Card Construction */
+.srvCard {
+    position: relative;
+    background: rgba(255, 255, 255, 0.01);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    padding: 36px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: border-color 0.4s ease, box-shadow 0.4s ease;
+    cursor: pointer;
+}
+
+/* Interactive Top Neon Border Indicator */
+.srvCardBorderGlow {
+    position: absolute;
+    top: 0;
+    left: 5%;
+    width: 90%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #60a5fa, #a855f7, transparent);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.srvCard:hover .srvCardBorderGlow {
+    opacity: 1;
+}
+
+/* Lucide Icon Styling context wrapper */
+.srvIconWrapper {
+    width: 56px;
+    height: 56px;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 28px;
+    color: #94a3b8;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.srvCard:hover .srvIconWrapper {
+    color: #fff;
+    background: rgba(59, 130, 246, 0.15);
+    border-color: rgba(59, 130, 246, 0.3);
+    transform: scale(1.05);
+}
+
+.srvCardTitle {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    margin-bottom: 14px;
+}
+
+.srvCardDesc {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    color: #64748b;
+    line-height: 1.6;
+    margin-bottom: 32px;
+}
+
+/* Micro interaction footer labels */
+.srvCardFooter {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 16px;
+    border-top: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.srvLearnMore {
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    color: #475569;
+    transition: color 0.3s ease;
+}
+
+.srvArrow {
+    color: #475569;
+    font-size: 16px;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.srvCard:hover .srvLearnMore {
+    color: #60a5fa;
+}
+
+.srvCard:hover .srvArrow {
+    color: #a855f7;
+    transform: translate(2px, -2px);
+}
