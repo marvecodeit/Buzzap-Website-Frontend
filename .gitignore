@@ -1,0 +1,37 @@
+# ---- Dependencies ----
+node_modules/
+**/node_modules/
+
+# ---- Env / secrets (NEVER commit) ----
+.env
+.env.*
+!.env.example
+**/.env
+**/.env.*
+!**/.env.example
+
+# ---- Next.js / build output ----
+.next/
+**/.next/
+out/
+build/
+dist/
+
+# ---- Logs ----
+*.log
+logs/
+**/logs/
+*.out
+
+# ---- Runtime uploads ----
+uploads/
+**/uploads/
+!**/uploads/.gitkeep
+
+# ---- Vercel / misc ----
+.vercel
+.DS_Store
+*.tsbuildinfo
+next-env.d.ts
+.idea/
+.vscode/
